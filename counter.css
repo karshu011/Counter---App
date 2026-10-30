@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-top: 50px;
+    box-sizing: border-box;
+
+    background: linear-gradient(135deg, #fff1f7, #eaf6ff);
+
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+
+    width: 430px;
+    height: 430px;
+
+    border-radius: 50%;
+
+    background: #dff3ff;
+
+    top: -180px;
+    right: -120px;
+
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+
+    width: 430px;
+    height: 430px;
+
+    border-radius: 50%;
+
+    background: #ffdce9;
+
+    bottom: -220px;
+    left: -180px;
+
+    z-index: -1;
+}
+
+
+.mode {
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+
+    background: #eaf7ff;
+    border-radius: 30px;
+}
+
+.mode button {
+    width: 50px;
+    height: 45px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: transparent;
+
+    font-size: 20px;
+
+    color: #66727d;
+
+    cursor: pointer;
+}
+
+#light {
+    background: #f5c5d6;
+    color: white;
+}
+
+
+/* DARK MODE */
+
+body.dark {
+    background: linear-gradient(135deg, #182536, #26384d);
+}
+
+body.dark .container {
+    background: #17212e;
+}
+
+body.dark h1 {
+    color: #c9dff0;
+}
+
+body.dark .subtitle {
+    color: #aab7c5;
+}
+
+body.dark .positive {
+    background: #26394d;
+    color: #d5e5f0;
+}
+
+body.dark .positive i {
+    color: #f3a9c4;
+}
+
+body.dark .counter-circle {
+    background: #26394d;
+    border-color: #49677a;
+}
+
+body.dark #count {
+    color: #f3c5d8;
+}
+
+body.dark .counter-circle p {
+    color: #b8c7d5;
+}
+
+body.dark #reset {
+    background: #405267;
+    color: #d8c6e0;
+}
+
+body.dark .btn h3 {
+    color: #b7c3cf;
+}
+
+body.dark .quote {
+    background: linear-gradient(135deg, #26394d, #304454);
+}
+
+body.dark .quote-mark {
+    color: #d596b1;
+}
+
+body.dark .quote p {
+    color: #b7c3cf;
+}
+
+body.dark .keep {
+    color: #b6a2bb;
+}
+
+body.dark .mode {
+    background: #26394d;
+}
+
+body.dark #light {
+    background: transparent;
+    color: #b7c3cf;
+}
+
+body.dark #dark {
+    background: #8bbfe8;
+    color: white;
+}
+
+.container {
+    width: 750px;
+    height: 1120px;
+    min-height: 1120px;
+
+    padding: 45px;
+    box-sizing: border-box;
+
+    background: white;
+    border-radius: 35px;
+
+    position: relative;
+}
+
+
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.logo {
+    display: flex;
+    align-items: flex-end;
+    gap: 7px;
+}
+
+.bar {
+    display: block;
+    width: 18px;
+    border-radius: 8px;
+}
+
+.one {
+    height: 18px;
+    background: #a9dff5;
+}
+
+.two {
+    height: 35px;
+    background: #f3a9c4;
+}
+
+.three {
+    height: 52px;
+    background: #c99be8;
+}
+
+/* Positive message */
+
+.positive {
+    background: #eaf7ff;
+
+    padding: 18px 27px;
+
+    border-radius: 40px;
+
+    color: #49677a;
+
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.positive i {
+    color: #f2a7bd;
+
+    margin-right: 10px;
+
+    font-size: 22px;
+}
+
+
+
+h1 {
+    font-size: 58px;
+
+    margin-top: 28px;
+    margin-bottom: 5px;
+
+    color: #58406b;
+}
+
+.subtitle {
+    font-size: 25px;
+
+    color: #8492a0;
+
+    margin-bottom: 45px;
+}
+
+.counter-circle {
+    width: 400px;
+    height: 400px;
+
+    margin: 0 auto 35px;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    background: #f3e8f8;
+    border: 12px solid #e2c5ec;
+
+    box-shadow:
+        0 8px 20px rgba(170, 130, 190, 0.15);
+
+    display: block;
+}
+#count {
+    position: absolute;
+
+    top: 95px;
+    left: 0;
+    right: 0;
+
+    height: 120px;
+    line-height: 120px;
+
+    text-align: center;
+
+    font-size: 105px;
+    font-weight: bold;
+
+    color: #63264d;
+}
+.counter-circle p {
+    position: absolute;
+
+    top: 245px;
+    left: 0;
+    right: 0;
+
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 21px;
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    color: #725d78;
+}
+.buttons {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    padding: 0 15px;
+}
+
+.btn {
+    width: 150px;
+
+    text-align: center;
+}
+
+.btn button {
+    width: 150px;
+    height: 150px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    font-size: 70px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+
+
+#decrement {
+    background: #f5a6bb;
+
+    color: white;
+
+    box-shadow: 0 10px 20px rgba(245, 166, 187, 0.25);
+}
+
+
+
+#increment {
+    background: #b99acb;
+    color: white;
+
+    box-shadow: 0 10px 20px rgba(150, 110, 170, 0.25);
+}
+#reset {
+    background: #eadcf0;
+    color: #72527e;
+
+    font-size: 65px;
+
+    box-shadow: 0 10px 20px rgba(150, 110, 170, 0.20);
+}
+
+
+.btn button:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 25px rgba(100, 100, 130, 0.18);
+}
+
+
+
+.btn h3 {
+    margin-top: 14px;
+
+    font-size: 20px;
+
+    color: #66727d;
+}
+.quote {
+    width: 100%;
+    height: 125px;
+
+    margin-top: 25px;
+
+    padding: 25px 35px;
+    box-sizing: border-box;
+
+    border-radius: 25px;
+
+    background: linear-gradient(135deg, #fff0f6, #eef9ff);
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.quote-mark {
+    font-size: 65px;
+
+    font-weight: bold;
+
+    color: #d596b1;
+}
+
+.quote p {
+    font-size: 21px;
+
+    line-height: 1.5;
+
+    color: #71808d;
+}
+
+
+
+.keep {
+    position: fixed;
+
+    right: 55px;
+    bottom: 70px;
+
+    color: #8a668f;
+
+    font-family: cursive;
+
+    font-size: 32px;
+
+    line-height: 1.1;
+
+    text-align: center;
+
+    transform: rotate(-3deg);
+}
+
+.keep span {
+    display: block;
+
+    font-size: 38px;
+
+    margin-top: 12px;
+
+    color: #e99db9;
+}
+
